@@ -1,0 +1,12 @@
+[
+ {
+  "source": ".config",
+  "target": "~/",
+  "isDirectory": true
+ },
+ {
+  "source": ".zshrc",
+  "target": "~/",
+  "isDirectory": false
+ }
+]

@@ -16,6 +16,13 @@ return {
           enable = true,
         },
       },
+      filters = {
+        git_ignored = false,
+        custom = {
+          '.git',
+          '.DS_Store',
+        },
+      },
     }
   end,
 }

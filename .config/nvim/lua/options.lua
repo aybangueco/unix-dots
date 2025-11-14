@@ -8,6 +8,10 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 vim.g.have_nerd_font = true
+vim.opt.cmdheight = 0
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Make line numbers default
 vim.o.number = true
@@ -75,10 +79,10 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
-vim.opt.expandtab = true   -- Use spaces instead of tabs
-vim.opt.shiftwidth = 2     -- Number of spaces to use for each step of (auto)indent
-vim.opt.tabstop = 2        -- Number of spaces that a <Tab> counts for
-vim.opt.softtabstop = 2    -- Number of spaces that <Tab> uses while editing
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
+vim.opt.tabstop = 2 -- Number of spaces that a <Tab> counts for
+vim.opt.softtabstop = 2 -- Number of spaces that <Tab> uses while editing
 vim.opt.smartindent = true -- Smart autoindenting on new lines
 
 -- vim: ts=2 sts=2 sw=2 et

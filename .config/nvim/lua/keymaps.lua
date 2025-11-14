@@ -51,4 +51,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Toggle nvim tree
+vim.keymap.set('n', '\\', '<Cmd>NvimTreeToggle<CR>', { desc = 'Toggle mini files' })
+
 -- vim: ts=2 sts=2 sw=2 et

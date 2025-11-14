@@ -31,6 +31,12 @@ return {
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        go = { 'gofumpt', 'goimports', 'goimports-reviser' },
+        javascript = { 'biome', 'biome-organize-imports' },
+        javascriptreact = { 'biome', 'biome-organize-imports' },
+        typescript = { 'biome', 'biome-organize-imports' },
+        typescriptreact = { 'biome', 'biome-organize-imports' },
+        astro = { 'biome', 'biome-organize-imports' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

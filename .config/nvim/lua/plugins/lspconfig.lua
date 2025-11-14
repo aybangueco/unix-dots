@@ -221,6 +221,11 @@ return {
         -- ts_ls = {},
         --
 
+        gopls = {},
+        ts_ls = {},
+        astro = {},
+        tailwindcss = {},
+        jsonls = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -234,6 +239,28 @@ return {
               -- diagnostics = { disable = { 'missing-fields' } },
             },
           },
+        },
+        eslint = {
+          on_attach = function(client, bufnr)
+            -- If Biome is also attached, let Biome handle formatting
+            local biome = vim.lsp.get_clients({ name = 'biome', bufnr = bufnr })[1]
+            if biome then
+              client.server_capabilities.documentFormattingProvider = false
+            end
+            on_attach(client, bufnr)
+          end,
+        },
+        biome = {
+          on_attach = function(client, bufnr)
+            -- Disable formatting from ts_ls & eslint when Biome is active
+            for _, name in ipairs { 'ts_ls', 'eslint' } do
+              local other = vim.lsp.get_clients({ name = name, bufnr = bufnr })[1]
+              if other then
+                other.server_capabilities.documentFormattingProvider = false
+              end
+            end
+            on_attach(client, bufnr)
+          end,
         },
       }
 
@@ -253,6 +280,10 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'goimports',
+        'goimports-reviser',
+        'gofumpt',
+        'golangci-lint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

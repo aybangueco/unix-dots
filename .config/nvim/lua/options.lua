@@ -10,8 +10,8 @@ vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 vim.opt.cmdheight = 0
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- Make line numbers default
 vim.o.number = true
@@ -19,6 +19,10 @@ vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = 'a'
+vim.o.mousemoveevent = true
+
+-- Enable terminal gui colors
+vim.opt.termguicolors = true
 
 -- Don't show the mode, since it's already in the status line
 vim.o.showmode = false

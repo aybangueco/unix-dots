@@ -18,12 +18,12 @@ return {
       require('mini.surround').setup()
 
       -- Indent animation
-      require('mini.indentscope').setup {
-        draw = {
-          delay = 50,
-        },
-        symbol = '▏',
-      }
+      -- require('mini.indentscope').setup {
+      --   draw = {
+      --     delay = 0,
+      --   },
+      --   symbol = '▏',
+      -- }
 
       -- Trailspace
       require('mini.trailspace').setup()

@@ -16,6 +16,7 @@ eval "$(starship init zsh)"
 
 # --- Aliases ---
 alias ls='ls -G'
+alias lg='lazygit'
 
 # --- Others ---
 

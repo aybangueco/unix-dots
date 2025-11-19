@@ -70,13 +70,36 @@ return {
 
         pickers = {
           live_grep = {
-            file_ignore_patterns = { 'node_modules', '.git/' },
+            file_ignore_patterns = {
+              '^node_modules/', -- super strict, kills node_modules at the root
+              '%.git/', -- git dir
+              '%.env', -- don’t grep secrets
+              '%.DS_Store',
+              'dist/',
+              'build/',
+              'target/',
+              '%.png$',
+              '%.jpg$',
+              '%.jpeg$',
+              '%.pdf$',
+              '%.lock$', -- package-lock, Cargo.lock, etc.
+            },
             additional_args = function(_)
               return { '--hidden' }
             end,
           },
           find_files = {
-            file_ignore_patterns = { 'node_modules', '.git/' },
+            file_ignore_patterns = {
+              '^node_modules/',
+              '%.git/',
+              'dist/',
+              'build/',
+              'target/',
+              '%.png$',
+              '%.jpg$',
+              '%.jpeg$',
+              '%.pdf$',
+            },
             hidden = true,
           },
         },

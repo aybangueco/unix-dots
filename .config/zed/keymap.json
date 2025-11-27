@@ -1,0 +1,102 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "\\ \\": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // Toggle focus
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      "-": "project_panel::ToggleFocus",
+
+      // Switch between diagnostics
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPreviousDiagnostic",
+
+      // Switch between git hunks
+      "space g p": "git_panel::ToggleFocus",
+      "] h": "editor::GoToHunk",
+      "[ h": "editor::GoToPreviousHunk",
+
+      // Show diagnostics across project
+      "space s d": "diagnostics::Deploy",
+
+      "space s f": "file_finder::Toggle",
+      "space /": "pane::DeploySearch",
+      // Show project panel with current file
+      "space e": "pane::RevealInProjectPanel"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      // Toggle focus
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      "ctrl-x": "project_panel::OpenSplitHorizontal",
+      "ctrl-v": "project_panel::OpenSplitVertical",
+
+      "escape": "project_panel::ToggleFocus",
+      "enter": "project_panel::Open",
+      "A": "project_panel::NewDirectory",
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+      "x": "project_panel::Cut",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "d": "project_panel::Delete"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // Open file finder
+      "space s f": "file_finder::Toggle",
+      // Open recent project
+      "space f p": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      // Toggle focus
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "bindings": {
+      // Toggle focus
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      "escape": "git_panel::Close"
+    }
+  }
+]

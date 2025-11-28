@@ -73,6 +73,7 @@ return {
             file_ignore_patterns = {
               '^node_modules/', -- super strict, kills node_modules at the root
               '%.git/', -- git dir
+              '%.idea/',
               '%.env', -- don’t grep secrets
               '%.DS_Store',
               'dist/',
@@ -92,6 +93,7 @@ return {
             file_ignore_patterns = {
               '^node_modules/',
               '%.git/',
+              '%.idea/',
               'dist/',
               'build/',
               'target/',

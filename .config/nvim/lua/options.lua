@@ -89,4 +89,14 @@ vim.opt.tabstop = 2 -- Number of spaces that a <Tab> counts for
 vim.opt.softtabstop = 2 -- Number of spaces that <Tab> uses while editing
 vim.opt.smartindent = true -- Smart autoindenting on new lines
 
+-- File type
+vim.filetype.add {
+  filename = {
+    ['docker-compose.yml'] = 'yaml.docker-compose',
+    ['docker-compose.yaml'] = 'yaml.docker-compose',
+    ['compose.yml'] = 'yaml.docker-compose',
+    ['compose.yaml'] = 'yaml.docker-compose',
+  },
+}
+
 -- vim: ts=2 sts=2 sw=2 et

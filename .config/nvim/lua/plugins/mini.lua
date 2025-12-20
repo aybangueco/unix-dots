@@ -20,6 +20,11 @@ return {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
+      -- Sessions
+      require('mini.sessions').setup {
+        auto_read = true,
+      }
+
       -- Trailspace
       require('mini.trailspace').setup()
 

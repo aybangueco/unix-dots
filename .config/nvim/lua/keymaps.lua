@@ -51,6 +51,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
-vim.keymap.set('n', '-', '<Cmd>Fyler kind=split_left_most<Cr>')
+vim.keymap.set('n', '-', '<cmd>Oil<CR>', {
+  desc = 'Open Oil',
+})
+
+vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', {
+  desc = 'Toggle Neo-tree',
+})
+
+vim.keymap.set('n', '<leader>o', '<cmd>Neotree reveal<CR>', {
+  desc = 'Reveal file in Neo-tree',
+})
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -27,6 +27,18 @@
 
       "-": "project_panel::ToggleFocus",
 
+      // +LSP
+      "space c a": "editor::ToggleCodeActions",
+      "space .": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+
       // Switch between diagnostics
       "] d": "editor::GoToDiagnostic",
       "[ d": "editor::GoToPreviousDiagnostic",
@@ -74,7 +86,9 @@
       // Open file finder
       "space s f": "file_finder::Toggle",
       // Open recent project
-      "space f p": "projects::OpenRecent"
+      "space f p": "projects::OpenRecent",
+
+      "-": "project_panel::ToggleFocus"
     }
   },
   {

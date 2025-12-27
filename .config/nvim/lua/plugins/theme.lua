@@ -1,21 +1,13 @@
 return {
   {
-    'catppuccin/nvim',
-    name = 'catppuccin',
+    'folke/tokyonight.nvim',
+    lazy = false,
     priority = 1000,
-
+    opts = {},
     config = function()
-      require('catppuccin').setup {
-        styles = {
-          no_italic = true,
-          term_colors = true,
-          default_integrations = true,
-          auto_integrations = true,
-        },
-      }
-
-      vim.cmd.colorscheme 'catppuccin-mocha'
+      vim.cmd.colorscheme 'tokyonight-storm'
     end,
   },
 }
+
 -- vim: ts=2 sts=2 sw=2 et

@@ -62,7 +62,8 @@ return {
         },
       },
       window = {
-        width = 30,
+        position = 'right',
+        width = 40,
         mappings = {
           ['<space>'] = 'toggle_node',
           ['<cr>'] = 'open',
